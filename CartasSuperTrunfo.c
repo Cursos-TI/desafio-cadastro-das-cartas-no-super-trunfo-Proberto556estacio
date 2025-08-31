@@ -226,7 +226,7 @@
         }
         break;
     case 2:
-        printf("Nome das cidades (Carta1): %s  (Carta2): %s *** \n", nomecid1, nomecid2);
+        printf("Nome das cidades (Carta1): %s  (Carta2): %s \n", nomecid1, nomecid2);
         printf("Atributo: Área\n");
         printf("Carta1 - %.2f\n", area1);
         printf("Carta2 - %.2f\n", area2);
@@ -239,7 +239,7 @@
         }
         break;
     case 3:
-        printf("Nome das cidades (Carta1): %s  (Carta2): %s *** \n", nomecid1, nomecid2);
+        printf("Nome das cidades (Carta1): %s  (Carta2): %s \n", nomecid1, nomecid2);
         printf("Atributo: PIB\n");
         printf("Carta1 - %.2f\n", pib1);
         printf("Carta2 - %.2f\n", pib2);
@@ -252,7 +252,7 @@
         }
         break;
     case 4:
-        printf("Nome das cidades (Carta1): %s  (Carta2): %s *** \n", nomecid1, nomecid2);
+        printf("Nome das cidades (Carta1): %s  (Carta2): %s \n", nomecid1, nomecid2);
         printf("Atributo: Número de pontos turísticos\n");
         printf("Carta1 - %d\n", ponto1);
         printf("Carta2 - %d\n", ponto2);
@@ -265,7 +265,7 @@
         }
         break;
     case 5:
-        printf("Nome das cidades (Carta1): %s  (Carta2): %s *** \n", nomecid1, nomecid2);
+        printf("Nome das cidades (Carta1): %s  (Carta2): %s \n", nomecid1, nomecid2);
         printf("Atributo: Densidade populacional\n");
         printf("Carta1 - %.2f\n", densipop1);
         printf("Carta2 - %.2f\n", densipop2);
@@ -370,32 +370,32 @@
     {
     case 'A':
     case 'a':
-         printf("Você escolheu atributo População\n");
+         printf("Você escolheu atributo População\n\n");
          resultado2 = populacao1 > populacao2 ? 1 : 0;
         break;
     case 'B':
     case 'b':
-         printf("Você escolheu atributo Área\n");
+         printf("Você escolheu atributo Área\n\n");
          resultado2 = area1 > area2 ? 1 : 0;
          break;
     case 'C':
     case 'c':
-         printf("Você escolheu atributo PIB\n");
+         printf("Você escolheu atributo PIB\n\n");
          resultado2 = pib1 > pib2 ? 1 : 0;
          break;
     case 'D':
     case 'd':
-         printf("Você escolheu atributo Número de Pontos Turísticos\n");
+         printf("Você escolheu atributo Número de Pontos Turísticos\n\n");
          resultado2 = ponto1 > ponto2 ? 1 : 0;
          break;
     case 'E':
     case 'e':
-         printf("Você escolheu atributo Densidade Populacional\n");
+         printf("Você escolheu atributo Densidade Populacional\n\n");
          resultado2 = densipop1 < densipop2 ? 1 : 0;
          break;
     case 'F':
     case 'f':
-         printf("Voce escolheu atributo PIB Per Cápita\n");
+         printf("Voce escolheu atributo PIB Per Cápita\n\n");
          resultado2 = pibper1 > pibper2 ? 1 : 0;  
     break; 
     default:
@@ -410,6 +410,7 @@
 
     // Atributos escolhidos
     printf("Atributos escolhidos\n");
+    printf("1º Atributo ");
     switch (primeiroAtributo)
     {
     case 'A':
@@ -441,7 +442,7 @@
         break;
     }
 
-    printf("Atributos escolhidos\n");
+    printf("2º Atributo ");
     switch (segundoAtributo)
     {
     case 'A':
@@ -468,12 +469,100 @@
     case 'f':
         printf("PIB Per Cápita\n");
         break;    
-    
     default:
         break;
     }
-
     
+    // Mostrar os valores dos dois atributos para cada carta
+    float valor1_cart1 = 0, valor2_cart1 = 0, valor1_cart2 = 0, valor2_cart2 = 0;
+
+    switch (primeiroAtributo) {
+    case 'A':
+    case 'a': 
+        valor1_cart1 = populacao1;
+        valor1_cart2 = populacao2;
+        break;
+    case 'B': 
+    case 'b': 
+        valor1_cart1 = area1;
+        valor1_cart2 = area2; 
+        break;
+    case 'C':
+    case 'c':
+        valor1_cart1 = pib1;
+        valor1_cart2 = pib2;
+        break;
+    case 'D':
+    case 'd':
+        valor1_cart1 = ponto1;
+        valor1_cart2 = ponto2;
+        break;
+    case 'E':
+    case 'e':
+        valor1_cart1 = densipop1;
+        valor1_cart2 = densipop2;
+        break;
+    case 'F':
+    case 'f':
+        valor1_cart1 = pibper1;
+        valor1_cart2 = pibper2;
+        break;
+}
+
+
+switch (segundoAtributo) {
+    case 'A':
+    case 'a': 
+        valor1_cart1 = populacao1;
+        valor1_cart2 = populacao2;
+        break;
+    case 'B': 
+    case 'b': 
+        valor1_cart1 = area1;
+        valor1_cart2 = area2; 
+        break;
+    case 'C':
+    case 'c':
+        valor1_cart1 = pib1;
+        valor1_cart2 = pib2;
+        break;
+    case 'D':
+    case 'd':
+        valor1_cart1 = ponto1;
+        valor1_cart2 = ponto2;
+        break;
+    case 'E':
+    case 'e':
+        valor1_cart1 = densipop1;
+        valor1_cart2 = densipop2;
+        break;
+    case 'F':
+    case 'f':
+        valor1_cart1 = pibper1;
+        valor1_cart2 = pibper2;
+        break;
+}
+
+
+// Mostrar os valores
+printf("\nValores dos atributos:\n");
+printf("Carta1 (%s): %.2f + %.2f = %.2f\n", nomecid1, valor1_cart1, valor2_cart1, valor1_cart1 + valor2_cart1);
+printf("Carta2 (%s): %.2f + %.2f = %.2f\n", nomecid2, valor1_cart2, valor2_cart2, valor1_cart2 + valor2_cart2);
+    
+
+//// Comparar as somas
+float soma1 = valor1_cart1 + valor2_cart1;
+float soma2 = valor1_cart2 + valor2_cart2;
+
+if (soma1 > soma2) {
+    printf("\nVencedor: Carta1 (%s) com soma de %.2f\n", nomecid1, soma1);
+} else if (soma2 > soma1) {
+    printf("\nVencedor: Carta2 (%s) com soma de %.2f\n", nomecid2, soma2);
+} else {
+    printf("\nEmpate! Ambas as cartas somaram %.2f\n", soma1);
+}
+printf("=========================================================\n\n");
+
 
 
 /*Lógica do jogo comparação atributos
