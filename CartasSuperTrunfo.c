@@ -284,20 +284,20 @@
     
     //DESAFIO - TEMA 3 - NÍVEL MESTRE
 
-    // Definição valores atributos - Operadores lógicos 
-    populacao1 = 12325000;
-    populacao2 = 6748000;
-    area1 = 1521.11;
-    area2 = 1200.25;
-    pib1 = 699.28;
-    pib2 = 300.50;
-    ponto1 = 50;
-    ponto2 = 30;
-    densipop1 = 8102.47;
-    densipop2 = 5622.24;
-    pibper1 = 56724.32;
-    pibper2 = 44532.91;
-   
+    // Definição valores verdadeiro e falso - Operadores lógicos 
+    populacao1 = 1;
+    populacao2 = 0;
+    area1 = 1;
+    area2 = 0;
+    pib1 = 1;
+    pib2 = 0;
+    ponto1 = 1;
+    ponto2 = 0;
+    densipop1 = 1;
+    densipop2 = 0;
+    pibper1 = 1;
+    pibper2 = 0;
+  
     //Menu Início do jogo - Para Primeiro Atributo
     printf("Menu - Atributo - Jogo da Comparação\n");
     printf("Escolha o primeiro attributo.\n");
@@ -317,37 +317,31 @@
     case 'A':
     case 'a':
          printf("Você escolheu atributo População\n");
-         printf("Escolha o segundo atributo\n");
          resultado1 = populacao1 > populacao2 ? 1 : 0;
         break;
     case 'B':
     case 'b':
          printf("Você escolheu atributo Área\n");
-         printf("Escolha o segundo atributo\n");
          resultado1 = area1 > area2 ? 1 : 0;
          break;
     case 'C':
     case 'c':
          printf("Você escolheu atributo PIB\n");
-         printf("Escolha o segundo atributo\n");
          resultado1 = pib1 > pib2 ? 1 : 0;
          break;
     case 'D':
     case 'd':
          printf("Você escolheu atributo Número de Pontos Turísticos\n");
-         printf("Escolha o segundo atributo\n");
          resultado1 = ponto1 > ponto2 ? 1 : 0;
          break;
     case 'E':
     case 'e':
          printf("Você escolheu atributo Densidade Populacional\n");
-         printf("Escolha o segundo atributo\n");
          resultado1 = densipop1 < densipop2 ? 1 : 0;
          break;
     case 'F':
     case 'f':
          printf("Voce escolheu atributo PIB Per Cápita\n\n");
-         printf("Escolha o segundo atributo\n\n");
          resultado1 = pibper1 > pibper2 ? 1 : 0;   
     break;
     default:
@@ -370,7 +364,7 @@
 
     if (primeiroAtributo == segundoAtributo)
     {
-        printf("Você escolheu o mesmo atributo!\n");
+        printf("Você escolheu o mesmo atributo, por favor queira recomeçar!\n");
     }   else {
     switch (segundoAtributo)
     {
@@ -410,7 +404,79 @@
     }
     }
     
-//Lógica do jogo comparação atributos
+    //  Resultado comparando cartas
+    printf("*** RESULTADO DA COMPARAÇÃO ***\n");
+    printf("Nome das cidades (Carta1): %s  (Carta2): %s *** \n", nomecid1, nomecid2);
+
+    // Atributos escolhidos
+    printf("Atributos escolhidos\n");
+    switch (primeiroAtributo)
+    {
+    case 'A':
+    case 'a': 
+        printf("População\n");
+        break;
+    case 'B':
+    case 'b':
+        printf("Área\n");
+        break;
+    case 'C':
+    case 'c':
+        printf("PIB\n");
+        break;
+    case 'D':
+    case 'd':
+        printf("Pontos Turísticos\n");
+        break;
+    case 'E':
+    case 'e':
+        printf("Densidade Populacional\n");
+        break;
+    case 'F':
+    case 'f':
+        printf("PIB Per Cápita\n");
+        break;    
+    
+    default:
+        break;
+    }
+
+    printf("Atributos escolhidos\n");
+    switch (segundoAtributo)
+    {
+    case 'A':
+    case 'a': 
+        printf("População\n");
+        break;
+    case 'B':
+    case 'b':
+        printf("Área\n");
+        break;
+    case 'C':
+    case 'c':
+        printf("PIB\n");
+        break;
+    case 'D':
+    case 'd':
+        printf("Pontos Turísticos\n");
+        break;
+    case 'E':
+    case 'e':
+        printf("Densidade Populacional\n");
+        break;
+    case 'F':
+    case 'f':
+        printf("PIB Per Cápita\n");
+        break;    
+    
+    default:
+        break;
+    }
+
+    
+
+
+/*Lógica do jogo comparação atributos
     if (resultado1 && resultado2)
     {
         printf("Que alegria, vocé é o grande vencedor! \n");
@@ -420,7 +486,7 @@
         printf("Que pena, você perdeu!\n");
     }   
 
-    
+*/
  
     
     return 0;
