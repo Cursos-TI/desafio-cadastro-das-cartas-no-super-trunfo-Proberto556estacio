@@ -285,18 +285,18 @@
     //DESAFIO - TEMA 3 - NÍVEL MESTRE
 
     // Definição valores verdadeiro e falso - Operadores lógicos 
-    populacao1 = 1;
-    populacao2 = 0;
-    area1 = 1;
-    area2 = 0;
-    pib1 = 1;
-    pib2 = 0;
-    ponto1 = 1;
-    ponto2 = 0;
-    densipop1 = 1;
-    densipop2 = 0;
-    pibper1 = 1;
-    pibper2 = 0;
+    populacao1 = 12325000;
+    populacao2 = 6748000;
+    area1 = 1521.11;
+    area2 = 1200.25;
+    pib1 = 699.28;
+    pib2 = 300.50;
+    ponto1 = 50;
+    ponto2 = 30;
+    densipop1 = 8102.47;
+    densipop2 = 5622.24;
+    pibper1 = 56724.32;
+    pibper2 = 44532.91;
   
     //Menu Início do jogo - Para Primeiro Atributo
     printf("Menu - Atributo - Jogo da Comparação\n");
