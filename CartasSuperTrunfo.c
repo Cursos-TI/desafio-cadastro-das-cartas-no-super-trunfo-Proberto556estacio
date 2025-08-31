@@ -284,7 +284,7 @@
     
     //DESAFIO - TEMA 3 - NÍVEL MESTRE
 
-    // Definição valores verdadeiro e falso
+    // Definição valores verdadeiro e falso - Operadores lógicos 
     populacao1 = 1;
     populacao2 = 0;
     area1 = 1;
